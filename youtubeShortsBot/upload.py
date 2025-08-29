@@ -14,7 +14,7 @@ options = Options()
 options.binary_location = r'/opt/firefox/firefox'
 
 # Set the Firefox profile
-profile = webdriver.FirefoxProfile('/home/toukoum/.mozilla/firefox/0he3tt71.default-release/')
+profile = webdriver.FirefoxProfile('/home/Haziel/.mozilla/firefox/0he3tt71.default-release/')
 profile.set_preference("dom.webdriver.enabled", False)
 profile.set_preference('useAutomationExtension', False)
 profile.update_preferences()
@@ -29,7 +29,7 @@ driver = webdriver.Firefox(firefox_profile=profile, desired_capabilities=desired
 
 
 #for all videos in the videos folder
-dir_path = '/home/toukoum/chatGptApi/Youtube-Shorts-Bot/videos'
+dir_path = '/home/Haziel/chatGptApi/Youtube-Shorts-Bot/videos'
 count = 0
 for path in os.listdir(dir_path): 
 if os.path.isfile(os.path.join(dir_path, path)): 

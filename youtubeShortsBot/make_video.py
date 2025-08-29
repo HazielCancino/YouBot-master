@@ -226,11 +226,11 @@ finalclip = clip.set_audio(new_audioclip)
 
 
 # location = os.path.join("C:\\Users\\python\\Desktop\\videos", f"video{i}.mp4")
-finalclip.write_videofile(f"/home/toukoum/chatGptApi/Youtube-Shorts-Bot/videos/vid{j}.mp4", fps=60)
+finalclip.write_videofile(f"/home/Haziel/chatGptApi/Youtube-Shorts-Bot/videos/vid{j}.mp4", fps=60)
 print("%s has been edited!\n"%file_name)
 
 # remove the video without music
-os.remove("/home/toukoum/chatGptApi/Youtube-Shorts-Bot/" + file_name)
+os.remove("/home/Haziel/chatGptApi/Youtube-Shorts-Bot/" + file_name)
 
 if (i>=songs):
 i = 1
