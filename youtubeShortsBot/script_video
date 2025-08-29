@@ -1,0 +1,127 @@
+What I want to include in the video:
+
+Video outline.
+INTRO:
+PART 1: CREATING VIDEOS
+
+- Download 9:16 format videos
+- Edit them with MoviePython (Python library)
+- Add text and audio
+- Name them correctly and save them in the video/ folder
+
+PART 2: UPLOADING VIDEOS
+- Based on the idea of ​​the yt DATA V3 API (none)
+Two problems:
+- 1. 10,000 quotas
+- 2. YouTube requires you to be a verified app to be able to upload videos in public mode...
+
+- Discovering Scrapping
+- Discovering Beautiful Soup (just retrieves information, not interacting with a web page)
+- Discovering Selenium => tutorial (video)
+- Chrome problem when you want to connect to YT Studio (it automatically detects that the browser is controlled) -> ChromeDriver
+- Discovering GeckoDriver, same usage as Chromedriver but for Firefox
+
+---------
+INTRO:
+---------
+
+I created a robot that automatically creates YouTube shorts and posts them without me having to leave my couch.
+And it wasn't easy.
+So, ladies and gentlemen, get ready, because Toukoum and his robot are going to blow everyone away!
+Mr. Beats and his 139 million subscribers will just have to hide, because the ultimate goal is to surpass them.
+
+Let's go
+
+_______
+Part 1
+-------
+
+First, I looked for what kind of YouTube channel I was going to create and then automate it, and I came up with this channel idea: Did You Know? Yes, you already knew that sunlight takes 8 minutes to reach the Earth. Well, that's the goal of the channel: to teach super mega giga important facts about the world around us. [video introducing the channel]
+
+It will consist solely of shorts, all of which will have the same video template: a title, a text with captivating and surprising information, a general background video, and some nice music, you know ;)
+
+To automate all this, I used the Python programming language, which I was somewhat familiar with but which is relatively simple to understand and use.
+
+To download the background videos, I discovered web scraping, which basically consists of automatically extracting data from web pages. I used the BeautifulSoup library in Python to retrieve all the information from a web page. So, I retrieve video links in 9:16 format, and from these links, I download all my background videos, like this one, for example: [video from Pexel].
+
+Once downloaded, I used another Python library called Moviepy.
+It's an open-source video processing library for Python that allows you to manipulate and modify videos, including adding effects, titles, subtitles, and even music. In short, it's exactly what I needed.
+
+So I poked around in the Moviepy documentation to:
+
+Edit my videos from Python, then I put everything together, and here's the kind of video you can get: []
+
+1- Add a title to all my videos that will be the same: Did you know?
+2- then another text below that will contain the content of the news.
+
+3- I also added music from my musik_tro_b1_walla/ folder.
+I put it all together, and we got this kind of magnificent, captivating video: [video]
+
+For the text of each video, I searched the internet to find sentences of about 10 words about surprising and captivating facts that might grab attention. I rewrote them, then arranged them by hand one by one in a Python list, then...
+Not at all, I used chatGPT [lol][sentence generation demo video]
+
+So, step 1 of video creation is finished, so I have my folder with all my shorts to post.
+
+______
+PART 2
+------
+
+Now we're tackling the part I thought would be more fun, but which ultimately gave me a lot of trouble.
+
+Automatically upload my Shorts to YouTube.
+
+At first, I heard people talking about YouTube's API for automatically uploading videos, so I gave it a try.
+An API is a software interface that allows you to "connect" one software or service to another software in order to exchange data and functionality.
+
+For example, imagine you want to buy ice cream. Instead of going to the store yourself, you could ask a friend to go to the store for you and bring back the ice cream of your dreams. You would tell them what flavor of ice cream you want, how many scoops you want, etc.
+
+Well, this friend, in our example, is the YouTube API, and I ask him to upload my videos by giving him specific parameters: which folder to find the video in, the title, the description, etc. [e.g., yt json API query] a good friend, in other words ;) [API explanatory video]
+
+So I used the YOUTUBE Data API V3, which allows me to upload videos to my channel, and... perfect!
+Well, no, actually there are two problems:
+YouTube already gives you a daily quota of 10,000 tokens to use its API, each act
+
+Each action interacting with the API costs tokens, and in our case, uploading a video costs 1,600 tokens, or 6 videos per day, which is rubbish...
+
+And the second problem is that YouTube requires you to be a verified app to be able to upload videos through its API in public mode... this means that all my videos will be private like this [video of the guy]... rubbish again...
+
+So, I had to find another solution.
+
+I searched a little, searched a lot, and here's the solution I found.
+
+Remember the web scraping in Part 1 to retrieve background videos? Well, with this tool, you can not only retrieve information from a website, but also interact with it, all from Python.
+
+For that, I used the Selenium library, which is super powerful.
+
+Selenium is like a magic wand for computers. It allows you to give them automatic commands, such as clicking buttons or filling out forms on websites. It's very useful when you want to do repetitive or tedious tasks. Perfect for my case, as I want to repeatedly upload YouTube videos. [Selenium driver explanatory video...]
+
+To work, Selenium needs a small program called a "driver." This driver acts as a sort of messenger between Selenium and the website you want to manipulate.
+
+Chromedriver is one of these drivers. It works specifically with the Google Chrome web browser. With Selenium and Chromedriver, I can browse Chrome from Python. It's fantastic!
+
+So I logged into YouTube Studio and automatically clicked the buttons to upload the video I wanted... except no.
+Google had to piss me off at some point. What's happening is that Chrome automatically detects that I'm using it and doesn't want me to log into my Google account, and therefore into YouTube Studio... it's useless again...
+
+I searched the depths of the internet to solve my problem and miraculously I found this kind gentleman [video of a guy telling me to use GeckoDriver]
+who explains that you need to use GeckoDriver to solve this problem, which is simply the equivalent of ChromeDriver for Firefox. Indeed, Chrome is developed by Google, so it knows perfectly well when a little rascal like me is using ChromeDriver. Except that by using GeckoDriver and changing a few settings, it doesn't know if Firefox is automatically used, and bingo, I can connect to my YouTube Studio!
+
+All I have to do is fix a few bugs and... voila, after hours and hours, it works!
+
+Part 3 - Results
+------
+
+The channel (Did you know it?) is now available. If you want to check it out, a link is in the description.
+Every evening at 7 p.m., my robot automatically posts 50 shorts to discover, with incredible information that will make you shudder.
+
+As I speak, the channel has 20 subscribers, the most-watched video has 1,600 views, and my channel has accumulated 13,000 views in total for a total of 36.5 hours of viewing.
+
+My robot is finally ready to become the world's number 1 YouTuber, ahead of Mr. Beast... or maybe not ;)
+
+Video to shoot
+----------------
+
+1 video for which I searched a bit, very expensive => shot from the back (I'll zoom in] where you can see me looking for something completely unrelated)
+
+1 shot of the video script at the same time as I say the word
+
+1 shot of complete ecstasy
